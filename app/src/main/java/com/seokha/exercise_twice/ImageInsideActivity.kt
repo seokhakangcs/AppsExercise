@@ -11,16 +11,13 @@ class ImageInsideActivity : AppCompatActivity() {
         setContentView(R.layout.activity_image_inside)
 
         var index:Int = intent.getIntExtra("index", 0)
-        Log.e("index", index.toString())
-
-        var resID = resources.getIdentifier(
+        var resourceID = resources.getIdentifier(
             "member_$index",
             "drawable",
             packageName
         )
-        var image = findViewById<ImageView>(R.id.inside_activity)
-        image.setImageResource(resID)
-        Log.e("Check-2", resID.toString())
+        var imageView = findViewById<ImageView>(R.id.inside_activity)
+        imageView.setImageResource(resourceID)
     }
 }
 
